@@ -28,8 +28,3 @@ This blog is great so far! Now, our stegosaurus is actually collaborating more o
 Your solution should look as follows:
 
 ![Solution for Project](images/nestedsolution.png)
-
-
-**Once you have a solution:**
-
-You can check a sample <a href="https://git.generalassemb.ly/education-product/React-Exercise-Solutions/tree/master/projects/project-02-nested-components/solution-code/src" target="_blank" >solution here!</a>

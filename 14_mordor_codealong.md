@@ -208,8 +208,7 @@ properties. Display information for the complete trilogy! (If you don't know eve
 ```
 
 # Solution
-
-Here are [complete solution files.](https://git.generalassemb.ly/education-product/React-Exercise-Solutions/tree/master/exercises/lord-of-the-rings/src)
+When you're finished, while you wait for your classmates, review the reflections below.
 
 ### Reflecting on Reusability
 Components are great because they allow us to compartmentalize code and easily

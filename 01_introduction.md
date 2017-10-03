@@ -18,11 +18,7 @@ First, let's think about where you might see a React.js app. Here are two quick 
 - Instagram
   - Instagram's public feed and internal system are entirely built on React.
 
-For an intro to React, watch this video:
-<video width="640" height="480" controls="controls" type="video/mp4">
-<source src="https://embed-ssl.wistia.com/deliveries/0d6ef119de938d8d6201637ec608f4120a4c8f62.bin">
-Your browser does not support the video tag.
-</video>
+For an intro to React, watch [this video](https://generalassembly.wistia.com/medias/lr8idjxtx8) (note: right click to open in a new tab!).
 
 The React framework was built to solve one problem: building large applications with data that changes over time.
 
@@ -44,4 +40,4 @@ This can be extrapolated to - both Facebook and Instagram are React apps!
 To get more hands on and in-depth down the React rabbit hole, let's keep going!
 
 
-*If you want to get an in-depth taste of what React is all about, [here's an introduction from React.js Conf 2015](https://www.youtube.com/watch?v=KVZ-P-ZI6W4&feature=youtu.be&t=510). We'd recommend starting around the 8:35 mark and watching until 16:30. This link is also in the Further Reading page at the end of the React module.*
+*If you want to get an in-depth taste of what React is all about, [here's an introduction from React.js Conf 2015](https://www.youtube.com/watch?v=KVZ-P-ZI6W4&feature=youtu.be&t=510). (note: right click to open in a new tab!). We'd recommend starting around the 8:35 mark and watching until 16:30. This link is also in the Further Reading page at the end of the React module.*

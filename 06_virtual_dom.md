@@ -49,18 +49,13 @@ Update your `index.js` file to have the three changes listed above:
 
 You should be familiar with the DOM.  You may have noticed that our `src/index.js` code mentions `ReactDOM`.  `ReactDOM` doesn't refer to the same DOM we know. Instead, it refers to a **Virtual DOM**. The Virtual DOM is a key piece of how React works.
 
-So, how is different?
-
-<video width="640" height="480" controls="controls" type="video/mp4">
-<source src="https://embed-ssl.wistia.com/deliveries/160cbbd9576b762075104180a89a0095723a36bc.bin">
-Your browser does not support the video tag.
-</video>
+So, how is different? Watch [this video](https://generalassembly.wistia.com/medias/v5qyqsir0s) to find out. _(note: right click for new tab!)_
 
 In React, the virtual DOM is a staging area for changes that will eventually be implemented.
 
 ![Virtual DOM Diagram](https://docs.google.com/drawings/d/11ugBTwDkqn6p2n5Fkps1p3Elp8ZToIRzXzvM4LJMYaU/pub?w=543&h=229)
 
-  > If you're interested in learning more about the Virtual DOM, [check this video out](https://www.youtube.com/watch?v=-DX3vJiqxm4). This link is also in the Further Reading page at the end of the React module.
+  > If you're interested in learning more about the Virtual DOM, [check this video out](https://www.youtube.com/watch?v=-DX3vJiqxm4). _(note: right click for new tab!)_
 
 You know every component has, at a minimum, a `render` method. The `render` method generates a Virtual DOM node to be added to the actual DOM.
 

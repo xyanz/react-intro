@@ -27,7 +27,3 @@ Let's have some practice creating a React component from scratch. How about a bl
 Here's what the solution might look like:
 
 ![Solution for Project](images/props_solution.png)
-
-> Once you have a solution:
-
-You can check a sample <a href="https://git.generalassemb.ly/education-product/React-Exercise-Solutions/tree/master/projects/project-01-jsx/solution-code/src" target="_blank" >solution here!</a>

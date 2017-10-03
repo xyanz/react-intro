@@ -12,13 +12,9 @@ Rather than simply display "Hello world", let's display a greeting to the user. 
 
 The question is, how do we add a name to our `Hello` component without hardcoding it into the component's `render` method?
 
-Find out!
-> Try it yourself alongside this video in [this codepen](https://codepen.io/susir/pen/vxWypq).
+Find out! Try it yourself alongside [this video](https://generalassembly.wistia.com/medias/gchiu63slo) in [this codepen](https://codepen.io/susir/pen/vxWypq) _(note: right click both for new tab!)_
 
-<video width="640" height="480" controls="controls" type="video/mp4">
-<source src="https://embed-ssl.wistia.com/deliveries/fce4a186f0003cee9490955bf5925fe2d17b8acc.bin">
-Your browser does not support the video tag.
-</video>
+
 
 
 ### Hello World exercise - You do!

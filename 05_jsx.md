@@ -24,13 +24,7 @@ export default Hello
 
 Let's talk about the value that the render method returns. It looks an awful lot like an HTML heading, but it's not. We often write out React components in **JSX**.
 
-Wait, what's that?
-> Try it yourself alongside this video in [this codepen](https://codepen.io/susir/pen/wJPoBw).
-
-<video width="640" height="480" controls="controls" type="video/mp4">
-<source src="https://embed-ssl.wistia.com/deliveries/bd819d206167f59a88640ae5ae1ed8e65abe1fcb.bin">
-Your browser does not support the video tag.
-</video>
+Wait, what's that? Try it yourself alongside [this video](https://generalassembly.wistia.com/medias/dcps4dqziy) in [this codepen](https://codepen.io/susir/pen/wJPoBw) (note: right click  both links to open in a new tab!)
 
 So, JSX allows us to write code that strongly resembles HTML. It is eventually compiled to lightweight JavaScript objects.
 
@@ -39,7 +33,7 @@ Your `Hello` component's `render` method:
 - The JSX creates a heading with `'Hello World!'`.
 - Your component reads this and renders a "Hello World!" heading.
 
-> React can be written without JSX. We won't be doing this, but if you want to learn more, [check out this blog post](http://jamesknelson.com/learn-raw-react-no-jsx-flux-es6-webpack/). This link is also in the Further Reading page at the end of the React module.
+> React can be written without JSX. We won't be doing this, but if you want to learn more, [check out this blog post](http://jamesknelson.com/learn-raw-react-no-jsx-flux-es6-webpack/) (note: open in new tab!).
 
 ### Challenge: Greet the day!
 
@@ -47,6 +41,3 @@ Your `Hello` component's `render` method:
   - Add a line below the "Hello World!" heading that will display `"It is time for tea."` in an `h3`.
 
 > Hint: Remember, the return statement in `render` can only return one DOM element. You can, however, place multiple elements within a parent `div` element.*
-
-
-**Once you have a solution:** Check it out [here](https://git.generalassemb.ly/education-product/React-Exercise-Solutions/blob/master/exercises/jsx-hello-world/App.js).
