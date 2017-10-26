@@ -1,12 +1,12 @@
 ## Hello World exercise - You do!
 #### Code along: A Very Basic Component
 
-In this section, we'll:
-* Remove the pre-filled contents of your `hello_world` app.
+In this section, we'll walk through:
+* Removing the pre-filled contents of your `hello_world` app.
   - `create-react-app` filled your app with sample content - let's make room for your app!
-* Add your own component definition.
+* Adding your own component definition.
   - You want the app to display the words "Hello World!"
-- Go through what we've done in detail!
+- Going through what we've done in detail!
 
 To start, remove the entire contents of the `src/App.js` file.
 
