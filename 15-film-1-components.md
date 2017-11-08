@@ -1,12 +1,12 @@
 # Starting a Film Project
 
-Fork and clone the [react-film repo](../../../react-film/).
+Fork and clone the `react-film` repo.
 
 This project was created with `create-react-app`. Once you have the app cloned, you should run `npm install`. You can then run it with `npm run start`.
 
 ## Your Mission
 
-Today the plan is to identify the app components, create the overall structure, then split that structure into individual components. We'll pass films as props to each component and ultimately use iteration to render one component for each film.
+Today the plan is to identify the app components, create the overall structure, then split that structure into individual components. You'll pass films as props to each component and ultimately use iteration to render one component for each film. At the end of this exercise, you will have this app:
 
 ![](images/film-1.png)
 
@@ -22,7 +22,7 @@ First, create the layout. You'll have a Films column and a Details column.
 
 Make the provided `App` component render the following code:
 
-```
+```html
 <div className="film-library">
   <div className="film-list">
     <h1 className="section-title">FILMS</h1>
@@ -50,7 +50,7 @@ If you check your file, it still shouldn't look differently. We're sending the p
 
 #### Step 4: Render a film
 
-In the `FilmListing` component, render the title of just 1 film as an `<h1>`, below the `section-title`
+In the `FilmListing` component, render the title of just 1 film as an `<h1>`, below the `section-title`.
 
 Does "It" appear on the left side of your browser?
 
@@ -103,6 +103,6 @@ Make each film row in the film list look like the main finished image, using the
 
 **Hint**: `getFullYear()` will be a single line of new code, and you'll use the keywords `new` and `Date`.
 
-#### Step 9: Move film posters to their own component
+#### Step 8: Move film posters to their own component
 
 Since the poster requires you to create the URL first, move those elements to their own component. This could be reusable later. Don't forget to pass the film as a prop to the new `FilmPoster` component.
