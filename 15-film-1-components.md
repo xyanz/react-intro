@@ -14,7 +14,10 @@ Today the plan is to identify the app components, create the overall structure, 
 
 **Importantly**: After each step below, check your application to see how it looks before going to the next one. It's good practice to be sure your app is working correctly before adding new functionality.
 
-Hint: Don't forget any `import` statements as you add more files.
+<details>
+  <summary>Hint</summary>
+  Don't forget any <code>import</code> statements as you add more files.
+</details>
 
 #### Step 1: Create baseline layout
 
@@ -46,7 +49,10 @@ Pass the films (stored in `TMDB.films`) to each of your new components as props.
 
 If you check your file, it still shouldn't look differently. We're sending the props to the components, but we are not using the props yet.
 
-**Hint**: For now, this step is just changing the `App.js` file to be sure it imports the film file and passes props.
+<details>
+  <summary>Hint</summary>
+  For now, this step is just changing the <code>App.js</code> file to be sure it imports the film file and passes props.
+</details>
 
 #### Step 4: Render a film
 
@@ -54,25 +60,27 @@ In the `FilmListing` component, render the title of just 1 film as an `<h1>`, be
 
 Does "It" appear on the left side of your browser?
 
-**Hint**: The films prop is an array, and you just want the title from the first one.
+<details>
+  <summary>Hint</summary>
+  The films prop is an array, and you just want the title from the first one.
+</details>
+
 
 #### Step 5: Create and render an array of film title elements
 
-Use `.map()` inside of the `FilmListing` to iterate over the collection of films and create an element for each one.
+Use `.map()` inside of the `FilmListing` to iterate over the collection of films and create an element for each one. (Here is the [map documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
 
 Then, render the variable `allFilms` underneath the Films `<h1>`.
 
 You should have a list of all the films appear in the left column.
 
-**Hint:** Need help on `map`? This step will look like this in your `render` method:
+<details>
+  <summary>Hint - Need help on <code>map</code>?</summary>
+  This step will look like this in your <code>render</code> method (above the <code>return</code>):
+  <code> let allFilms = this.props.films.map( (film, index) => ( your-jsx-per-film-here ))</code>
+    Then, you'll just need to call <code>{allFilms}</code> in your JSX where you want the titles to appear.
+</details>
 
-```js
-let allFilms = this.props.films.map( (film, index) => (
-    <h1>{film.title}</h1>
-))
-```
-
-Then, you'll just need to call `{allFilms}` in your JSX where you want the titles to appear.
 
 
 #### Step 6: Move the film rows to their own component
@@ -101,7 +109,11 @@ Make each film row in the film list look like the main finished image, using the
 
 - You'll also have to extract the year from the `release_date` property. To do this, you'll need to figure out how to use the [`getFullYear()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getFullYear) JS method.
 
-**Hint**: `getFullYear()` will be a single line of new code, and you'll use the keywords `new` and `Date`.
+<details>
+  <summary>Hint on <code>getFullYear()</code></summary>
+  <code>getFullYear()</code> will be a single line of new code, and you'll use the keywords <code>new</code> and <code>Date</code>.
+</details>
+
 
 #### Step 8: Move film posters to their own component
 
