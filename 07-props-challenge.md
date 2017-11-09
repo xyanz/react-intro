@@ -1,4 +1,4 @@
-# You Do: A Blog Post
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) You Do: A Blog Post
 
 Let's have some practice creating a React component from scratch. How about a blog post?
 

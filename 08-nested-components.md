@@ -1,4 +1,13 @@
-# Nested Components
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Nested Components
+
+
+### Learning Objectives
+*After this lesson, you will be able to:*
+- Diagram nested components
+- Render components within another component
+- Pass props to a nested component
+
+## We Do: Nested Components
 
 In your blog, a section of your `App.js` `render` function currently looks like this:
 ```html

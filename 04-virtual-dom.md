@@ -1,4 +1,10 @@
-## The Virtual DOM
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) The Virtual DOM
+
+
+### Learning Objectives
+*After this lesson, you will be able to:*
+- Describe the Virtual DOM versus the standard DOM
+- Understand how components are called
 
 ### Review and Refactor
 

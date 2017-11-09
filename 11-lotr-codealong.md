@@ -1,4 +1,4 @@
-# Component Code-along: Lord of the Rings
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)  Lord of the Rings Exercise
 Let's build something small to reinforce what you've learned so far. We're going
 to practice creating components and passing information into them.
 
@@ -6,7 +6,7 @@ We'll build a simple website that shows title and runtime information about the
 original Lord of the Rings Trilogy.
 
 Specifically, at the end of this lesson, your solution will look like this:
-![Lord of the Rings movie info](https://git.generalassemb.ly/pages/education-product/module-fe-framework-react/532rwqfzbfasnbfansfbasnbfqpi4u4p1421fafaa/lectures/01-react/images/lord-of-the-rings-final.png)
+![Lord of the Rings movie info](images/lord-of-the-rings-final.png)
 
 ### Setup
 Open your terminal and use `create-react-app` to spin up another React
@@ -208,7 +208,7 @@ properties. Display information for the complete trilogy! (If you don't know eve
 ```
 
 # Solution
-When you're finished, while you wait for your classmates, review the reflections below.
+When you're finished, review the reflections below.
 
 ### Reflecting on Reusability
 Components are great because they allow us to compartmentalize code and easily
@@ -231,7 +231,7 @@ Building and reusing components becomes especially powerful the more complex com
 Building one component to rule all them all would save you a lot of time and headaches!
 
 
-# Internet Dive Point
+### Internet Dive Point
 In case you want to nerd out, here are handy links to the IMDB page for each
 movie:
 

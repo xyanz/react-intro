@@ -1,4 +1,12 @@
-# Component Data with Props
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Props
+
+
+### Learning Objectives
+*After this lesson, you will be able to:*
+- Describe props
+- Create a component that renders props
+
+## Component Data with Props
 
 The React framework was built to handle data that changes over time.
 

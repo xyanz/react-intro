@@ -1,5 +1,12 @@
-### Hello World exercise - You do!
-#### Initial Setup
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Hello World exercise - You do!
+
+
+### Learning Objectives
+*After this lesson, you will be able to:*
+- Build a React app using `create-react-app`
+- View `create-react-app` working locally
+
+## Initial Setup
 
 Let's jump right in! We'll create a skeleton React project and walk through it as we go.
 
@@ -60,7 +67,7 @@ Most of the important files are in the `src` directory. Specifically, we'll be u
 
 ---
 
-### Stop / Catch Up / Investigate
+## Stop / Catch Up / Investigate
 
 Take some time and look at what's been generated. Specifically pay attention to `src/App.js` and `src/index.js`
 

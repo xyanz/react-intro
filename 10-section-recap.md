@@ -1,3 +1,6 @@
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) React Review
+
+
 ## Catch your breath!
 
 It is time to stop for a moment and review all of the topics that we've discussed so far. React may seem very confusing at first with all of the jargon, so let's break everything down:
