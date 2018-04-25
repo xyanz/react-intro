@@ -1,5 +1,8 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) You Do: A Blog Post
 
+## Challenge Time!
+![](./images/2911kx.jpg)
+
 Let's have some practice creating a React component from scratch. How about a blog post?
 
 1. Change directories back into the main directory where you want to keep your code (outside the `hello_world` React app directory we've been working on).
@@ -8,11 +11,11 @@ Let's have some practice creating a React component from scratch. How about a bl
 
   <blockquote>Note: Because `create-react-app` runs on port 3000, you'll have to stop the current `hello_world` app in order to view this new app (generally, hit ctrl + c in the Terminal window in which it's running).</blockquote>
 
-3. In `src/App.js`, change the `App` component to be a `Post` component.
+3. In `src/App.jsx`, change the `App` component to be a `Post` component.
 
-> Note: Normally, it would be good practice to rename the `App.js` file `Post.js` or to create a new component file for the `Post` component entirely. Then it would be obvious which component each file contains. However, don't do this! This is a comment for you to know best practices for the future - in this tutorial, leave the file named `App.js`. We're just concentrating on making it work for now!
+> Note: Normally, it would be good practice to rename the `App.jsx` file `Post.jsx` or to create a new component file for the `Post` component entirely. Then it would be obvious which component each file contains. However, don't do this! This is a comment for you to know best practices for the future - in this tutorial, leave the file named `App.jsx`. We're just concentrating on making it work for now!
 
-4. Create a `post` object in `src/index.js` that has the following properties:
+4. Create a `post` object in `src/index.jsx` that has the following properties:
     - `title`  (example value: `"Dinosaurs are awesome"`)
     - `author` (example value: `"Stealthy Stegosaurus"`)
     - `body` (example value: `"Check out this body property!"`)

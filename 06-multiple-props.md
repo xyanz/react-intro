@@ -1,10 +1,11 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Multiple Props
 
 
-### Learning Objectives
-*After this lesson, you will be able to:*
-- Pass multiple individual props to a component
-- Pass multiple props as an object to a component
+## Learning Objectives
+*After this lesson, students will be able to:*
+
+- [ ] Pass multiple individual props to a component
+- [ ] Pass multiple props as an object to a component
 
 
 ## What about... multiple props?
@@ -13,12 +14,12 @@ Of course, we often want components to display more complex information. To do s
 
 First, add another prop to the component call: `<Hello name={"Nick"} />,` changes to `<Hello name={"Nick"} age={24} />`.
 
-Update your `index.js` file to reflect this:
+Update your `index.jsx` file to reflect this:
 
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Hello from './App.js';
+import Hello from './App';
 
 ReactDOM.render(
   <Hello name={"Nick"} age={24} />,
@@ -26,20 +27,18 @@ ReactDOM.render(
 )
 ```
 
-Now, in our component definition we have access to both values.  The second step is to change the `Hello` component class in `App.js` to use the age information!
+Now, in our component definition we have access to both values.  The second step is to change the `Hello` component class in `App.jsx` to use the age information!
 
 
 ```js
-class Hello extends Component {
-  render () {
-    return (
-      <div>
-        <h1>Hello {this.props.name}!</h1>
-        <p>You are {this.props.age} years old.</p>
-      </div>
-    )
-  }
-}
+export default function Hello(props) {
+  return (
+    <div>
+      <h1>Hello {props.name}!</h1>
+      <p>You are {props.age} years old.</p>
+    </div>
+  );
+};
 ```
 
 
@@ -50,7 +49,7 @@ class Hello extends Component {
 
 If we have many props, it might get difficult to keep track when we're passing everything in to render a component. A better practice is to organize values in some kind of object and then pass props to the component from that object. Let's see this strategy.
 
-Currently, in `index.js`, we put Nick's name and age directly into the `ReactDOM.render` call. Instead, we'll create an object that holds Nick's name and age, making it clearer for other developers and easier to change in the future. In your `index.js file`, below the `import` statements, add this object definition:
+Currently, in `index.jsx`, we put Nick's name and age directly into the `ReactDOM.render` call. Instead, we'll create an object that holds Nick's name and age, making it clearer for other developers and easier to change in the future. In your `index.jsx file`, below the `import` statements, add this object definition:
 
 ``` js
 var person = {
@@ -59,7 +58,7 @@ var person = {
 }
 ```
 
-Next, we'll update what's passed into the component. Near the bottom of your `index.js`, modify the `ReactDOM.render()` call:
+Next, we'll update what's passed into the component. Near the bottom of your `index.jsx`, modify the `ReactDOM.render()` call:
 
 ``` js
 ReactDOM.render(
@@ -71,7 +70,7 @@ ReactDOM.render(
 )
 ```
 
-We don't have to change anything in `App.js`, because it's still receiving exactly the same values for exactly the same two props - `name` and `age`. We're just sending it those values in a slightly different way.
+We don't have to change anything in `App.jsx`, because it's still receiving exactly the same values for exactly the same two props - `name` and `age`. We're just sending it those values in a slightly different way.
 
 > Check it out! If you browse to http://localhost:3000 nothing should have changed.
 
@@ -86,18 +85,18 @@ Let's say our user has some favorite animals. Update your object to include an a
 
 
 ``` js
-var person = {
+const person = {
   personName: "Nick",
   personAge: 24,
   favorites: [
     "capybaras",
     "Tigers",
     "Dinosaurs count!"
-  ]
-}
+  ],
+};
 ```
 
-Now we can use this new information as a prop, just like normal. You could choose to pass a single element (`favorites[0]`) or the entire array.  We'll use the entire array so that the component can display _all_ a person's favorite animals. First, update your `ReactDOM.render()` call in `index.js`:
+Now we can use this new information as a prop, just like normal. You could choose to pass a single element (`favorites[0]`) or the entire array.  We'll use the entire array so that the component can display _all_ a person's favorite animals. First, update your `ReactDOM.render()` call in `index.jsx`:
 
 
 ``` js
@@ -111,13 +110,13 @@ ReactDOM.render(
 )
 ```
 
-If you check your application now, nothing has changed. Remember, a component class will just ignore any props it receives that it doesn't use. But, we want to use the favorite animals! So, second, update your `Hello` class `render` method in `App.js`:
+If you check your application now, nothing has changed. Remember, a component class will just ignore any props it receives that it doesn't use. But, we want to use the favorite animals! So, second, update your `Hello` class `render` method in `App.jsx`:
 
 ```html
 <div>
-  <h1>Hello {this.props.name}!</h1>
-  <p>You are {this.props.age} years old.</p>
-  <p>You love: {this.props.animals}</p>
+  <h1>Hello {props.name}!</h1>
+  <p>You are {props.age} years old.</p>
+  <p>You love: {props.animals}</p>
 </div>
 ```
 
@@ -125,9 +124,9 @@ If you check the page now, you'll see React prints the entire array, as that's w
 
 ```html
 <div>
-  <h1>Hello {this.props.name}!</h1>
-  <p>You are {this.props.age} years old.</p>
-  <p>You love: {this.props.animals[0]}</p>
+  <h1>Hello {props.name}!</h1>
+  <p>You are {props.age} years old.</p>
+  <p>You love: {props.animals[0]}</p>
 </div>
 ```
 

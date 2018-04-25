@@ -2,18 +2,27 @@
 
 
 ### Learning Objectives
-*After this lesson, you will be able to:*
+*After this lesson, students will be able to:*
 - Identify and define React components
 - Describe why we use components in React
 - Build a React component
-- Describe JSX
+- Describe what JSX is transpiled into
+
+### Preparation
+- Have `create-react-app` installed
+
 
 ## Components
 
 The basic unit you'll be working with in ReactJS is a **component**. Components are pieces of our application that we can define once and reuse all over the place.
 
-For an intro to components, watch [this video](https://generalassembly.wistia.com/medias/h64z7lp1ir) (note: right click to open in a new tab!).
+>**Note!**
+>
+>For the next day or so, we'll be working with _functional components_. These are lightweight versions of the more robust class-based components we'll see later. 
+> 
+> _**Hint:**_ Functional components are **function**s; regular components are **class**es.   
 
+For an intro to components, watch [this video](https://generalassembly.wistia.com/medias/h64z7lp1ir) (note: right click to open in a new tab!).
 
 If you're used to writing out all of a page's view in a single HTML file, using components is a very different way of approaching web development.
 
@@ -67,44 +76,48 @@ Then, add the component definition below - and yes, we know there are no semicol
   - With that said, many companies have their own programming style guide. While many companies don't use semicolons in React, some companies do - for example, AirBnB. It's important to check with your company for their practices!
 
 ```js
-// bring in React and Component from React
+// bring in React from react
 
-import React, {Component} from 'react';
+import React from 'react';
 
 // define our Hello component
-class Hello extends Component {
+function Hello() {
   // what should the component render?
-  render () {
-    // make sure to return some UI
-    return (
-      <h1>Hello World!</h1>
-    )
-  }
+  // make sure to return some UI
+  return (
+    <h1>Hello World!</h1>
+  );
 }
 
-export default Hello
+export default Hello;
 ```
 
 Let's break down the things we see here...
 
-##### `import React, {Component} from 'react'`
-This imports React methods and the `Component` class from the React library.
+```import React from 'react'```
 
-##### `class Hello`
-This is the component we're creating. In this example, we are creating a component and calling it "Hello."
+This imports React methods from the React library.
 
-##### `extends Component`
+ ```function Hello```
+ 
+This is the component we're creating. In this example, we are creating a functional component and calling it "Hello."
+
+<!-- ##### `extends Component`
 
 We inherit from the `Component` React library class to create our component definitions. Here, we are creating a new `Component` subclass called `Hello`.
-- Because it extends (also known as inherits from) `Component`, our `Hello` class gets to reuse code and capabilities from `React.Component`.
+- Because it extends (also known as inherits from) `Component`, our `Hello` class gets to reuse code and capabilities from `React.Component`. -->
 
-##### `render()`
-Every component has, at minimum, a `render` method. The `render` method is what renders the component to the screen, so it controls what is displayed for this component. From this function, we return what we want to display.  
+```return()```
+
+Every functional component must return _**one**_ jsx tag. This is what renders the component to the screen, (i.e., it controls what is displayed for this component). From this function, we return what we want to display.  
 - In our case, we are rendering a "Hello World!" heading: `<h1>Hello World!</h1>`.
 
-> Note! That heading tag above looks like it's straight out of HTML, but it's actually a special language called JSX, which you'll see on the next page. For now, know that JSX will act like HTML when it's rendered to the screen.
+> Note! 
+> 
+> That heading tag above looks like it's straight out of HTML, but it's actually a special language called JSX, which you'll see on the next page. For now, know that JSX will act like HTML when it's rendered to the screen.
 
-##### `export default Hello`
+```export default Hello```
+
 This exposes the `Hello` class to other files.  This means that other files can `import` from the `App.js` file in order to use the `Hello` class. In our case, we'll be importing it into `index.js` by calling an `import` to `App.js`.
 
 When we try to import something from `App.js`, JavaScript will attempt to match a named export.
@@ -120,34 +133,43 @@ If you switch to your browser and navigate to http://localhost:3000, you can see
 
 ### Wait - What's that HTML doing in my Javascript?
 
-This is currently the contents of our `src/App.js` file:
+This is currently the contents of our `src/App.js` file (note the condensed `export` statement):
 
 ```js
 // bring in React and Component from React
 
-import React, {Component} from 'react';
+import React from 'react';
 
 // define our Hello component
-class Hello extends Component {
+export default function Hello() {
   // what should the component render?
-  render () {
-    // make sure to return some UI
-    return (
-      <h1>Hello World!</h1>
-    )
-  }
-}
+  // make sure to return some UI
+  return (
+    <h1>Hello World!</h1>
+  );
+};
 
-export default Hello
 ```
 
-Let's talk about the value that the render method returns. It looks an awful lot like an HTML heading, but it's not. We often write out React components in **JSX**.
 
-Wait, what's that? Try it yourself alongside [this video](https://generalassembly.wistia.com/medias/dcps4dqziy) in [this codepen](https://codepen.io/susir/pen/wJPoBw) (note: right click  both links to open in a new tab!)
+### Try it (5 mins)
+
+Let's talk about what this function returns. It looks an awful lot like an HTML heading, but it's not. We often write out React components in **JSX**.
+
+Wait, what's that? Try it yourself:
+
+1. Go here: [Babeljs.io](https://babeljs.io/repl/)
+2. Click on "try it out"
+1. You should now see a split screen similar to below
+3. Paste in `<h1>Hello World!</h1>` in the left panel.
+4. You should see the resulting plain javascript on the right.
+5. Try any other HTML you might know and see what happens
+
+![](images/babeljs.png)
 
 So, JSX allows us to write code that strongly resembles HTML. It is eventually compiled to lightweight JavaScript objects.
 
-Your `Hello` component's `render` method:
+Your `Hello` component's renders:
 - Currently returns JSX, not HTML.
 - The JSX creates a heading with `'Hello World!'`.
 - Your component reads this and renders a "Hello World!" heading.
@@ -159,4 +181,4 @@ Your `Hello` component's `render` method:
 - Change your `Hello` component to return multiple lines.
   - Add a line below the "Hello World!" heading that will display `"It is time for tea."` in an `h3`.
 
-> Hint: Remember, the return statement in `render` can only return one DOM element. You can, however, place multiple elements within a parent `div` element.*
+> Hint: Remember, the return statement can only return one DOM element. You can, however, place multiple elements within a parent `div` element.
