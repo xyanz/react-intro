@@ -13,7 +13,7 @@ The React framework was built to handle data that changes over time.
 
 So far, we have defined a `Hello` component in `App.jsx`. The component returns a `div` with a few headings, written in JSX.
 
-In `index.jsx`, we are importing this component, appending what the `Hello` component's `render` method returns to the virtual DOM, and rendering that.
+In `index.js`, we are importing this component, appending what the `Hello` component's `render` method returns to the virtual DOM, and rendering that.
 
 This is great, but it doesn't involve any data yet, let alone data that changes over time! 
 
@@ -37,7 +37,7 @@ Let's use **props** to make our "Hello World" app more flexible.
 
 We want to make a greeting that's reusable for many different users, so we'll have a `name` prop for the name of the user.
 
-In your `src/index.jsx`, we'll change the line that renders the `Hello` component to include this `name` prop. The new line will be:
+In your `src/index.js`, we'll change the line that renders the `Hello` component to include this `name` prop. The new line will be:
 
 `<Hello name={"Nick"} />`
 

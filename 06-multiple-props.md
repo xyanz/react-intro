@@ -14,7 +14,7 @@ Of course, we often want components to display more complex information. To do s
 
 First, add another prop to the component call: `<Hello name={"Nick"} />,` changes to `<Hello name={"Nick"} age={24} />`.
 
-Update your `index.jsx` file to reflect this:
+Update your `index.js` file to reflect this:
 
 ```js
 import React from 'react';
@@ -49,7 +49,7 @@ export default function Hello(props) {
 
 If we have many props, it might get difficult to keep track when we're passing everything in to render a component. A better practice is to organize values in some kind of object and then pass props to the component from that object. Let's see this strategy.
 
-Currently, in `index.jsx`, we put Nick's name and age directly into the `ReactDOM.render` call. Instead, we'll create an object that holds Nick's name and age, making it clearer for other developers and easier to change in the future. In your `index.jsx file`, below the `import` statements, add this object definition:
+Currently, in `index.js`, we put Nick's name and age directly into the `ReactDOM.render` call. Instead, we'll create an object that holds Nick's name and age, making it clearer for other developers and easier to change in the future. In your `index.js file`, below the `import` statements, add this object definition:
 
 ``` js
 var person = {
@@ -58,7 +58,7 @@ var person = {
 }
 ```
 
-Next, we'll update what's passed into the component. Near the bottom of your `index.jsx`, modify the `ReactDOM.render()` call:
+Next, we'll update what's passed into the component. Near the bottom of your `index.js`, modify the `ReactDOM.render()` call:
 
 ``` js
 ReactDOM.render(
@@ -96,7 +96,7 @@ const person = {
 };
 ```
 
-Now we can use this new information as a prop, just like normal. You could choose to pass a single element (`favorites[0]`) or the entire array.  We'll use the entire array so that the component can display _all_ a person's favorite animals. First, update your `ReactDOM.render()` call in `index.jsx`:
+Now we can use this new information as a prop, just like normal. You could choose to pass a single element (`favorites[0]`) or the entire array.  We'll use the entire array so that the component can display _all_ a person's favorite animals. First, update your `ReactDOM.render()` call in `index.js`:
 
 
 ``` js

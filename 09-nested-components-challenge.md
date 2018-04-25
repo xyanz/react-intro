@@ -4,7 +4,7 @@ This blog is great so far! Now, our stegosaurus is actually collaborating more o
 
 ### Steps
 
-* From the `index.jsx`, modify the `render` method to pass the `Post` component a prop called `allAuthors`, which will be the `authors` array.
+* From the `index.js`, modify the `render` method to pass the `Post` component a prop called `allAuthors`, which will be the `authors` array.
 
 * Create an `Author` component that renders "Written by ", followed by an author.
 

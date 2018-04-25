@@ -70,7 +70,7 @@ With this setup, we can render one or more comments inside the `Post` component.
 <Comment body={props.comments[0]} />
 ```
 
-Let's reflect on what just happened. We rendered a component _inside another component_. Technically, we just **nested** components. Very much like how we imported `Post` from `App.jsx` into `index.jsx` and rendered a post inside `index.jsx`, we've imported `Comment` from `Comment.jsx` into `App.jsx` and rendered a comment. Inside `App.jsx`, we're using some of the props to render a post and simply passing the `comments` prop on to be rendered with the `Comment` component class. So the flow of the props looks like this:
+Let's reflect on what just happened. We rendered a component _inside another component_. Technically, we just **nested** components. Very much like how we imported `Post` from `App.jsx` into `index.js` and rendered a post inside `index.js`, we've imported `Comment` from `Comment.jsx` into `App.jsx` and rendered a comment. Inside `App.jsx`, we're using some of the props to render a post and simply passing the `comments` prop on to be rendered with the `Comment` component class. So the flow of the props looks like this:
 
 
 ![nested components chart](./images/nested_components_chart.jpg)

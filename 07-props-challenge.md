@@ -15,7 +15,7 @@ Let's have some practice creating a React component from scratch. How about a bl
 
 > Note: Normally, it would be good practice to rename the `App.jsx` file `Post.jsx` or to create a new component file for the `Post` component entirely. Then it would be obvious which component each file contains. However, don't do this! This is a comment for you to know best practices for the future - in this tutorial, leave the file named `App.jsx`. We're just concentrating on making it work for now!
 
-4. Create a `post` object in `src/index.jsx` that has the following properties:
+4. Create a `post` object in `src/index.js` that has the following properties:
     - `title`  (example value: `"Dinosaurs are awesome"`)
     - `author` (example value: `"Stealthy Stegosaurus"`)
     - `body` (example value: `"Check out this body property!"`)

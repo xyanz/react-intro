@@ -20,9 +20,9 @@ We've been shoving JSX and JS into files named `*.js`. As good practice and to f
 
 `Hello` in `src/App.jsx`  is our component class. It returns the JSX for our "Hello World!" and heading tags. Keeping components separate and organized is a best practice, so we created that in its own file.
 
-To show up on the page, though, that component still needs to actually be called from somewhere.  The main "hub" of our React app is `src/index.js`.  We'll investigate how `src/index.jsx` is currently loading and rendering the component, and we'll improve the code by making it more explicit and readable.
+To show up on the page, though, that component still needs to actually be called from somewhere.  The main "hub" of our React app is `src/index.js`.  We'll investigate how `src/index.js` is currently loading and rendering the component, and we'll improve the code by making it more explicit and readable.
 
-Look at your `src/index.jsx` file, and contrast it with the code below.
+Look at your `src/index.js` file, and contrast it with the code below.
 
 
 ```js
@@ -53,7 +53,7 @@ The last difference is that `ReactDOM.render(
 ## Hello World exercise - You do!
 ### Code along: Calling our `Hello` component explicitly
 
-Update your `index.jsx` file to have the three changes listed above:
+Update your `index.js` file to have the three changes listed above:
 - Delete the CSS import.
 - Change the component name that's imported to be your `Hello` component.
 - Change the component name that's used inside `ReactDOM.render` to be your `Hello` component.
@@ -101,7 +101,7 @@ ReactDOM.render(
 
 - The second argument of the `ReactDOM.render()` function is `document.getElementById('root')`; this finds **the DOM element to append that content to**. This argument can be any element on the page. Here, we're simply appending it to an element with the id `root`.  (Look through the `index.html` file if you're curious about the HTML structure from `create-react-app`.)
 
-When our `index.jsx` is processed, React compares the virtual DOM to the regular DOM and only updates the `root` element on the page. 
+When our `index.js` is processed, React compares the virtual DOM to the regular DOM and only updates the `root` element on the page. 
 
 
 > Side note: What is `<Hello />` written in? JSX! Whenever you use a
