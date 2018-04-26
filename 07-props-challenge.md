@@ -9,11 +9,11 @@ Let's have some practice creating a React component from scratch. How about a bl
 
 2. Referring to everything we've done up until now, create a new project using `create-react-app`. If you need to refresh your memory, refer to the Initial Setup section or view the official [`create-react-app` Github repository](https://github.com/facebookincubator/create-react-app).
 
-  <blockquote>Note: Because `create-react-app` runs on port 3000, you'll have to stop the current `hello_world` app in order to view this new app (generally, hit ctrl + c in the Terminal window in which it's running).</blockquote>
+ >Note: Because `create-react-app` runs on port 3000, you'll have to stop the current `hello_world` app in order to view this new app (generally, hit <kbd>ctrl</kbd> + <kbd>c</kbd> in the Terminal window in which it's running).
 
 3. In `src/App.jsx`, change the `App` component to be a `Post` component.
 
-> Note: Normally, it would be good practice to rename the `App.jsx` file `Post.jsx` or to create a new component file for the `Post` component entirely. Then it would be obvious which component each file contains. However, don't do this! This is a comment for you to know best practices for the future - in this tutorial, leave the file named `App.jsx`. We're just concentrating on making it work for now!
+ >Note: Normally, it would be good practice to rename the `App.jsx` file `Post.jsx` or to create a new component file for the `Post` component entirely. Then it would be obvious which component each file contains. However, don't do this! This is a comment for you to know best practices for the future - in this tutorial, leave the file named `App.jsx`. We're just concentrating on making it work for now!
 
 4. Create a `post` object in `src/index.js` that has the following properties:
     - `title`  (example value: `"Dinosaurs are awesome"`)

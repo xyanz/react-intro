@@ -1,5 +1,20 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) The Virtual DOM
 
+## Preparation
+
+Now is a great time to initialize [`eslint`](https://eslint.org/) so we get some feedback while coding.
+
+1. `npm i -D eslint`
+2. `npx eslint --init` and answer the following wizard:
+![](./images/eslint-config.png)  
+3. replace your `.eslintrc.yml` with this
+
+```yaml
+extends: airbnb
+rules:
+  "react/prop-types": 0
+
+```
 
 ## Learning Objectives
 *After this lesson, students will be able to:*
@@ -18,7 +33,7 @@ We've been shoving JSX and JS into files named `*.js`. As good practice and to f
 
 ## Review and Refactor
 
-`Hello` in `src/App.jsx`  is our component class. It returns the JSX for our "Hello World!" and heading tags. Keeping components separate and organized is a best practice, so we created that in its own file.
+`Hello` in `src/App.jsx` is our component class. It returns the JSX for our "Hello World!" and heading tags. Keeping components separate and organized is a best practice, so we created that in its own file.
 
 To show up on the page, though, that component still needs to actually be called from somewhere.  The main "hub" of our React app is `src/index.js`.  We'll investigate how `src/index.js` is currently loading and rendering the component, and we'll improve the code by making it more explicit and readable.
 
@@ -87,19 +102,18 @@ ReactDOM.render(
 - `<Hello />` uses **the name of the component to render**. In our `App.js` file, the `Hello` component returns the content to render:  a div with "Hello World!" and heading tags (written in JSX). As a reminder, this is the `Hello` component:
 
 ```js
-  export default function Hello() {
-      // make sure to return some UI
-      return (
-        <div>
-          <h1>Hello World!</h1>
-          <h3>It is time for tea.</h3>
-        </div>
-      )
-    }
-  };
+export default function Hello() {
+  // make sure to return some UI
+  return (
+    <div>
+      <h1>Hello World!</h1>
+      <h3>It is time for tea.</h3>
+    </div>
+  );
+}
 ```
 
-- The second argument of the `ReactDOM.render()` function is `document.getElementById('root')`; this finds **the DOM element to append that content to**. This argument can be any element on the page. Here, we're simply appending it to an element with the id `root`.  (Look through the `index.html` file if you're curious about the HTML structure from `create-react-app`.)
+- The second argument of the `ReactDOM.render()` function is `document.getElementById('root')`; this finds **the DOM element to which your React application will be mounted**. This argument can be any element on the page. Here, we're simply appending it to an element with the id `root`.  (Look through the `index.html` file if you're curious about the HTML structure from `create-react-app`.)
 
 When our `index.js` is processed, React compares the virtual DOM to the regular DOM and only updates the `root` element on the page. 
 

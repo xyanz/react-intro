@@ -1,8 +1,14 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Hello World exercise - You do!
 
+### Preparation
+- Add [React Dev Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) to Chrome
+- Babel syntax highlighter for your text editor
+  - Sublime: [Babel](https://packagecontrol.io/packages/Babel)
+  - Atom: [Babel](https://atom.io/packages/language-babel)
+
 
 ### Learning Objectives
-*After this lesson, you will be able to:*
+*After this lesson, students will be able to:*
 - Build a React app using `create-react-app`
 - View `create-react-app` working locally
 
@@ -31,15 +37,15 @@ The tool creates a new directory for your app, so move into it...
 $ cd hello_world
 ```
 
-Use `npm start` to start a server that will serve your new React application!
+Use `yarn start` to start a server that will serve your new React application!
 
 ```sh
-$ npm start
+$ yarn start
 ```
 
 > You have now set up a Hello World app that you will continue working on during this lesson's exercises!
 
-After running `$ npm start`, you can view the app at `http://localhost:3000`
+After running `$ yarn start`, you can view the app at `http://localhost:3000`
 
 > Note: If you ever need to stop the server, you can hit `ctrl-c` in the terminal window.
 

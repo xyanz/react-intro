@@ -18,7 +18,7 @@ The basic unit you'll be working with in ReactJS is a **component**. Components 
 
 >**Note!**
 >
->For the next day or so, we'll be working with _functional components_. These are lightweight versions of the more robust class-based components we'll see later. 
+>For the next day or so, we'll be working with _functional components_. These are lightweight versions of the more robust class-based components we'll see later.
 > 
 > _**Hint:**_ Functional components are **function**s; regular components are **class**es.   
 
@@ -120,8 +120,8 @@ Every functional component must return _**one**_ jsx tag. This is what renders t
 
 This exposes the `Hello` class to other files.  This means that other files can `import` from the `App.js` file in order to use the `Hello` class. In our case, we'll be importing it into `index.js` by calling an `import` to `App.js`.
 
-When we try to import something from `App.js`, JavaScript will attempt to match a named export.
-- Our only named export in `App.js` is `Hello`.
+When we try to import something from `App.jsx`, JavaScript will attempt to match a named export.
+- Our only named export in `App.jsx` is `Hello`.
 
 The `default` keyword means that if we try to import anything from this file that the app can't find, JavaScript will automatically revert to importing `Hello` instead.
 - Only one default export is allowed per file.
@@ -133,7 +133,7 @@ If you switch to your browser and navigate to http://localhost:3000, you can see
 
 ### Wait - What's that HTML doing in my Javascript?
 
-This is currently the contents of our `src/App.js` file (note the condensed `export` statement):
+This is currently the contents of our `src/App.jsx` file (note the condensed `export` statement):
 
 ```js
 // bring in React and Component from React
@@ -169,12 +169,14 @@ Wait, what's that? Try it yourself:
 
 So, JSX allows us to write code that strongly resembles HTML. It is eventually compiled to lightweight JavaScript objects.
 
-Your `Hello` component's renders:
+> React can be written without JSX. We won't be doing this, but if you want to learn more, [check out this blog post](http://jamesknelson.com/learn-raw-react-no-jsx-flux-es6-webpack/) (note: open in new tab!).
+
+
+Your `Hello` component renders:
 - Currently returns JSX, not HTML.
 - The JSX creates a heading with `'Hello World!'`.
 - Your component reads this and renders a "Hello World!" heading.
 
-> React can be written without JSX. We won't be doing this, but if you want to learn more, [check out this blog post](http://jamesknelson.com/learn-raw-react-no-jsx-flux-es6-webpack/) (note: open in new tab!).
 
 ### Challenge: Greet the day!
 

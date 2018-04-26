@@ -28,21 +28,19 @@ npm start
 ### Create A Simple Movie Component
 Open up your `./src` directory in your favorite text editor.
 
-Inside of `./src` folder, create a new React Component file called `Movie.js`.
+Inside of `./src` folder, create a new React Component file called `Movie.jsx`.
 
-**src/Movie.js**
+**src/Movie.jsx**
 ```js
-import React, { Component } from 'react';
+import React from 'react';
 
-class Movie extends Component {
-  render() {
-    return (
-      // we'll add JSX here
-    )
-  }
+function Movie() {
+  return (
+    // we'll add JSX here
+  );
 }
 
-export default Movie
+export default Movie;
 ```
 
 Let's add some JSX to the render function so this component will be visible in
@@ -65,131 +63,126 @@ The JSX will look like this:
 </div>
 ```
 
-Add this JSX to the component so that it's returned from the `render()` method.
+Add this JSX to the component so that it's returned from the function.
 
-**src/Movie.js**
+**src/Movie.jsx**
 ```js
-import React, { Component } from 'react';
+import React from 'react';
 
-class Movie extends Component {
-  render() {
-    return (
-      <div>
-        <h1>The Lord of the Rings: A Trilogy</h1>
-        <p>4h 37min</p>
-      </div>
-    )
-  }
+function Movie() {
+  return (
+    <div>
+      <h1>The Lord of the Rings: A Trilogy</h1>
+      <p>4h 37min</p>
+    </div>
+  );
 }
 
-export default Movie
+export default Movie;
 ```
 
 ### Viewing the Component
-Let's make this component appear on the page. One great thing about using
-`create-react-app` is it tells us exactly what we need to do to start editing
-our application. The homepage says, "To get started, edit `src/App.js` and save to
-reload." Let's do that!
+Let's make this component appear on the page. First, Rename App.js --> App.jsx
 
-Open `src/App.js`.
+```bash
+mv src/App.js src/App.jsx
+```
 
-Add our `<Movie></Movie>` component just after the paragraph. Go back to the
+Open `src/App.jsx` and replace the contents with this (note the `<Movie />`), then go back to the
 app and see if it appears.
+
+```js
+import React from 'react';
+import './App.css';
+
+function App() {
+  return (
+    <Movie />
+  );
+}
+
+export default App;
+```
 
 ### Dealing with Errors
 Uh oh. There's an error.
 
 ```
 Failed to compile
-./src/App.js
+./src/App.jsx
   Line 16:  'Movie' is not defined  react/jsx-no-undef
 ```
 
 `'Movie'` is not defined? Ah.
 
-One does not simply refer to components in React. In our `src/App.js`, we're saying "Display what's returned from the `Movie` component." However - we haven't told `src/Apps.js` where to find the `Movie` component! We must import a component
+One does not simply refer to components in React. In our `src/App.jsx`, we're saying "Display what's returned from the `Movie` component." However - we haven't told `src/Apps.js` where to find the `Movie` component! We must import a component
 before using it.
 
 Add this import statement with the other imports at the top of
-the `src/App.js` file.
+the `src/App.jsx` file.
 
 ```
-import Movie from './Movie.js';
+import Movie from './Movie';
 ```
 
 Now you should see the page without the error message, and it should have the
 JSX from the Movie component.
 
-The entire `App.js` should look like this:
+The entire `App.jsx` should look like this:
 
-**src/App.js**
+**src/App.jsx**
 ```js
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import Movie from './Movie.js';
+import Movie from './Movie';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Movie></Movie>
-      </div>
-    )
-  }
+function App() {
+  return (
+    <Movie />
+  );
 }
 
-export default App
+export default App;
 ```
 
 ### Passing Information via Properties
 We need to make our Movie component accept information so we can use it to
-display different titles and runtimes. In the `src/App.js` file, add `title`, `hours`, and `minutes`
+display different titles and runtimes. In the `src/App.jsx` file, add `title`, `hours`, and `minutes`
 props to the `<Movie>` tag. We'll be able to read the value of these
 props from inside the component. You can name props pretty much
 anything you want - but it's good practice to be descriptive!
 
 ```js
-<Movie title="The Fellowship of the Ring" hours="2" minutes="58"></Movie>
+<Movie title="The Fellowship of the Ring" hours="2" minutes="58" />
 ```
 We'll be able to read the value of these props from inside the component. You can name props pretty much
 anything you want - but it's good practice to be descriptive!
 
-React gathers
-all of the props we added to the call to `<Movie>` and makes them each available
-through the `this.props` object. This means that inside the `Movie` component, we can now access the values of props through
-`this.props.title`, `this.props.hours` and `this.props.minutes`. Remember, we use curly braces `{ }` to display the value of something.
+React gathers all of the props we added to the call to `<Movie>` and makes them each available
+through the `props` object. This means that inside the `Movie` component, we can now access the values of props through
+`props.title`, `props.hours` and `props.minutes`. Remember, we use curly braces `{ }` to display the value of something.
 
-In `src/Movie.js`, change the `<h1>` to display the value of
-the `title` prop by writing `{this.props.title}`.
+In `src/Movie.jsx`, change the `<h1>` to display the value of
+the `title` prop by writing `{props.title}`.
 
 There was also the `hours` and `minutes` props. Update the JSX to access and display the value of each prop we created.
 
 The `render()` function ends up looking like this:
 
-**src/Movie.js**
+**src/Movie.jsx**
 ```js
-import React, { Component } from 'react';
+import React from 'react';
 
-class Movie extends Component {
-  render() {
-    return (
-      <div>
-        <h1>The Lord of the Rings: {this.props.title}</h1>
-        <p>{this.props.hours}h {this.props.minutes}min</p>
-      </div>
-    )
-  }
+function Movie() {
+  return (
+    <div>
+      <h1>The Lord of the Rings: {props.title}</h1>
+      <p>{props.hours}h {props.minutes}min</p>
+    </div>
+  );
 }
 
-export default Movie
+export default Movie;
 ```
 
 Refresh the page and make sure everything works correctly.
@@ -197,14 +190,13 @@ Refresh the page and make sure everything works correctly.
 ### Reusing the Component
 Once you've got props working for one component, then write two more!
 
-In `src/App.js`, call
-the `<Movie>` component again with different values for the `title`, `hours` and `minutes`
+In `src/App.jsx`, call the `<Movie>` component again with different values for the `title`, `hours` and `minutes`
 properties. Display information for the complete trilogy! (If you don't know everything about Lord of the Rings off the top of your head, here it is).
 
 ```html
-<Movie title="The Fellowship of the Ring" hours="2" minutes="58"></Movie>
-<Movie title="The Two Towers" hours="2" minutes="59"></Movie>
-<Movie title="The Return of the King" hours="3" minutes="21"></Movie>
+<Movie title="The Fellowship of the Ring" hours="2" minutes="58" />
+<Movie title="The Two Towers" hours="2" minutes="59" />
+<Movie title="The Return of the King" hours="3" minutes="21" />
 ```
 
 # Solution
@@ -214,8 +206,7 @@ When you're finished, review the reflections below.
 Components are great because they allow us to compartmentalize code and easily
 reuse parts we create. We simply set the value of props and the component defines how everything should be displayed.
 
-In this instance, we factored out some redundancy of the
-movie titles.
+In this instance, we factored out some redundancy of the movie titles.
 - All these movies start with `"Lord of the Rings:"`, so only the unique part is the prop.
 - Similarly, we don't have to rewrite the format of the runtime information.
 
